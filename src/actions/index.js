@@ -5,6 +5,7 @@ export const CHANGE_OPERATION = "CHANGE_OPERATION";
 export const CLEAR_DISPLAY = "CLEAR_DISPLAY";
 
 export const MEMORY_ADD = "MEMORY_ADD";
+export const MEMORY_READ = "MEMORY_READ";
 
 export const addOne = () => {
     return({type:ADD_ONE});
@@ -28,4 +29,8 @@ export const clearDisplay = () => {
 
 export const memoryAdd = () => {
     return {type: MEMORY_ADD};
+}
+
+export const memoryRead = () => {
+    return {type: MEMORY_READ};
 }

@@ -3,7 +3,7 @@ import React, { useReducer } from 'react';
 import './App.css';
 
 import reducer, { initialState } from './reducers';
-import { clearDisplay, applyNumber, changeOperation, memoryAdd } from './actions';
+import { clearDisplay, applyNumber, changeOperation, memoryAdd, memoryRead } from './actions';
 
 import TotalDisplay from './components/TotalDisplay';
 import CalcButton from './components/CalcButton';
@@ -28,6 +28,10 @@ function App() {
     return () => dispatch(memoryAdd());
   }
 
+  const handleMemoryRead = () => {
+    return () => dispatch(memoryRead());
+  }
+
   return (
     <div className="App">
       <nav className="navbar navbar-dark bg-dark">
@@ -46,7 +50,7 @@ function App() {
             
             <div className="row">
               <CalcButton value={"M+"} onClick={handleMemoryAdd()} />
-              <CalcButton value={"MR"}/>
+              <CalcButton value={"MR"} onClick={handleMemoryRead()} />
               <CalcButton value={"MC"}/>
             </div>
 
