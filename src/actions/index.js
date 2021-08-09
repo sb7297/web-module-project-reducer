@@ -14,7 +14,7 @@ export const applyNumber = (number) => {
     return({type:APPLY_NUMBER, payload:number});
 }
 
-export const applyOperation = (op) => {
+export const changeOperation = (op) => {
     if (op === "+" || op === "*" || op === "-") {
         return {type: CHANGE_OPERATION, payload: op};
     } else {
@@ -22,7 +22,7 @@ export const applyOperation = (op) => {
     }
 }
 
-export const applyClearDisplay = () => {
+export const clearDisplay = () => {
     return {type: CLEAR_DISPLAY};
 }
 
